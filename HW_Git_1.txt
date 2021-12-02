@@ -1,0 +1,226 @@
+1) Посмотреть где я
+
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ pwd
+/c/Users/user
+
+2) Создать папку
+
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ mkdir Vika
+
+3) Зайти в папку
+
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ cd Vika
+
+4) Создать 3 папки
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika
+$ mkdir folder1 folder2 folder3
+
+5) Зайти в любую папку
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika
+$ cd folder1
+
+6) Создать 3 папки
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ mkdir A B C
+
+7) Создать 5 файлов (3 txt, 2 json)
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ touch one.json 2.json first.txt second.txt third.txt
+
+8). Вывести список содержимого папки
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ ls -la
+total 4
+drwxr-xr-x 1 user 197121 0 Oct  3 20:06 ./
+drwxr-xr-x 1 user 197121 0 Oct  3 20:05 ../
+-rw-r--r-- 1 user 197121 0 Oct  3 20:06 2.json
+drwxr-xr-x 1 user 197121 0 Oct  3 20:05 A/
+drwxr-xr-x 1 user 197121 0 Oct  3 20:05 B/
+drwxr-xr-x 1 user 197121 0 Oct  3 20:05 C/
+-rw-r--r-- 1 user 197121 0 Oct  3 20:06 first.txt
+-rw-r--r-- 1 user 197121 0 Oct  3 20:06 one.json
+-rw-r--r-- 1 user 197121 0 Oct  3 20:06 second.txt
+-rw-r--r-- 1 user 197121 0 Oct  3 20:06 third.txt
+
+9) + Открыть любой txt файл
+10) + написать туда что-нибудь, любой текст.
+11) + сохранить и выйти.
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ vim first.txt
+(“I”, ввод текста, esc, “:wq”)
+
+ user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ cat first.txt
+один
+два
+три
+четыре
+пять
+один
+один
+четыре
+
+12) Выйти из папки на уровень выше
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika
+$ mv /c/Users/user/Vika/folder1/one.json /c/Users/user/Vika/folder1/A/one.json
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika
+$ mv /c/Users/user/Vika/folder1/2.json /c/Users/user/Vika/folder1/B/2.json
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ cp ./{second.txt,third.txt} ./C
+
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ ls -la
+total 5
+drwxr-xr-x 1 user 197121  0 Oct  3 20:11 ./
+drwxr-xr-x 1 user 197121  0 Oct  3 20:05 ../
+drwxr-xr-x 1 user 197121  0 Oct  3 20:11 A/
+drwxr-xr-x 1 user 197121  0 Oct  3 20:11 B/
+drwxr-xr-x 1 user 197121  0 Oct  3 20:13 C/
+-rw-r--r-- 1 user 197121 76 Oct  3 20:06 first.txt
+-rw-r--r-- 1 user 197121  0 Oct  3 20:06 second.txt
+-rw-r--r-- 1 user 197121  0 Oct  3 20:06 third.txt
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ cd C
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1/C
+$ ls -la
+total 4
+drwxr-xr-x 1 user 197121 0 Oct  3 20:13 ./
+drwxr-xr-x 1 user 197121 0 Oct  3 20:11 ../
+-rw-r--r-- 1 user 197121 0 Oct  3 20:13 second.txt
+-rw-r--r-- 1 user 197121 0 Oct  3 20:13 third.txt
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1/C
+$ cd ..
+
+15) Найти файл по имени
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ find . -name "second.txt"
+./C/second.txt
+./second.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ grep один first.txt
+один
+один
+один
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ grep -c четыре first.txt
+2
+
+17) вывести несколько первых строк из текстового файла
+
+
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ head -2 first.txt
+один
+два
+
+18) вывести несколько последних строк из текстового файла
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ tail -3 first.txt
+один
+один
+четыре
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ less -X first.txt
+один
+два
+три
+четыре
+пять
+один
+один
+четыре
+
+20) вывести дату и время
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$ date
+Sun Oct  3 15:24:08     2021
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika/folder1
+$
+
+
+
+
+
+
+
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ curl http://162.55.220.72:5005/terminal-hw-request
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   237  100   237    0     0   1227      0 --:--:-- --:--:-- --:--:--  1234{"Intro":"Hello!! This is your the first response from server","Tasks":{"Task_1":"Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)","result":["Your_String","Your_number"]}}
+
+
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ curl "http://162.55.220.72:5005/get_method?name=(Viktoriya)&age=(25)"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    23  100    23    0     0    117      0 --:--:-- --:--:-- --:--:--   117["(Viktoriya)","(25)"]
+
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+В visual studio code прописываем и сохраняем как vika.sh:
+#!/bin/bash
+cd Vika 
+mkdir folder4 folder5 folder6 
+cd folder4 
+touch 4.txt 5.txt 6.txt 7.json 8.json 
+mkdir D E F 
+ls -la 
+mv ./{7.json,8.json} ./D/
+
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Vika
+$ ./vika.sh
+total 8
+drwxr-xr-x 1 user 197121 0 Oct  3 23:18 .
+drwxr-xr-x 1 user 197121 0 Oct  3 23:18 ..
+-rw-r--r-- 1 user 197121 0 Oct  3 23:18 4.txt
+-rw-r--r-- 1 user 197121 0 Oct  3 23:18 5.txt
+-rw-r--r-- 1 user 197121 0 Oct  3 23:18 6.txt
+-rw-r--r-- 1 user 197121 0 Oct  3 23:18 7.json
+-rw-r--r-- 1 user 197121 0 Oct  3 23:18 8.json
+drwxr-xr-x 1 user 197121 0 Oct  3 23:18 D
+drwxr-xr-x 1 user 197121 0 Oct  3 23:18 E
+drwxr-xr-x 1 user 197121 0 Oct  3 23:18 F
