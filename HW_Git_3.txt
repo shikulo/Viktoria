@@ -1,0 +1,230 @@
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ pwd
+/c/Users/user
+
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ cd Viktoria
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git branch Postman
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git branch Jmeter
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git branch CheckLists
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git branch BagReports
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git branch SQL
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git branch Charles
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git branch MobileTesting
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git branch
+  BagReports
+  Charles
+  CheckLists
+  Jmeter
+  MobileTesting
+  Postman
+  SQL
+* main
+
+
+
+2. Запушить все ветки на внешний репозиторий
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$  git push origin Postman Jmeter CheckLists BagReports SQL Charles MobileTesting
+Enumerating objects: 41, done.
+Counting objects: 100% (41/41), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (41/41), 9.79 KiB | 3.26 MiB/s, done.
+Total 41 (delta 17), reused 3 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (17/17), done.
+To https://github.com/shikulo/Viktoria.git
+ * [new branch]      Postman -> Postman
+ * [new branch]      Jmeter -> Jmeter
+ * [new branch]      CheckLists -> CheckLists
+ * [new branch]      BagReports -> BagReports
+ * [new branch]      SQL -> SQL
+ * [new branch]      Charles -> Charles
+ * [new branch]      MobileTesting -> MobileTesting
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git checkout BagReports
+Switched to branch 'BagReports'
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (BagReports)
+$ touch structureBag.txt
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (BagReports)
+$ vim structureBag.txt
+
+Bug_id:
+Title:
+Severity:
+Environment:
+Precondition:
+1)
+2)
+...
+STR:
+1.
+2.
+3.
+...
+AR:
+ER:
+Attachments:
+
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (BagReports)
+$ git add .
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (BagReports)
+$ git status
+On branch BagReports
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   structureBag.txt
+
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (BagReports)
+$ git commit -m "structureBag"
+[BagReports 5eccacd] structureBag
+ 1 file changed, 17 insertions(+)
+ create mode 100644 structureBag.txt
+
+4. Запушить структуру багрепорта на внешний репозиторий
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (BagReports)
+$ git push -u origin BagReports
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 366 bytes | 366.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shikulo/Viktoria.git
+   935595a..5eccacd  BagReports -> BagReports
+Branch 'BagReports' set up to track remote branch 'BagReports' from 'origin'.
+
+5. Вмержить ветку Bag Reports в Main
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (BagReports)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git merge BagReports
+Updating 935595a..5eccacd
+Fast-forward
+ structureBag.txt | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+ create mode 100644 structureBag.txt
+
+6. Запушить main на внешний репозиторий.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 316 bytes | 316.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shikulo/Viktoria.git
+   070ee52..8826654  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git checkout CheckLists
+Switched to branch 'CheckLists'
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (CheckLists)
+$ touch check.txt
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (CheckLists)
+$ vim check.txt
+
+
+Сheck:           | Result:  | Сomment: |
+1)Block          |               |                      |
+1.1                  |Passed  |                      |
+1.2                  |Failed    |                      |
+1.3                  |Blocked |                     |
+1.4	          |Skipped |                    |
+1.5	          |Not run |                    |
+8. Запушить структуру на внешний репозиторий
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (CheckLists)
+$ git add .
+warning: LF will be replaced by CRLF in check.txt.
+The file will have its original line endings in your working directory
+
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (CheckLists)
+$ git commit -m "check"
+[CheckLists 0afbc05] check
+ 1 file changed, 7 insertions(+)
+ create mode 100644 check.txt
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (CheckLists)
+$ git push -u origin CheckLists
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 361 bytes | 361.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shikulo/Viktoria.git
+   935595a..0afbc05  CheckLists -> CheckLists
+Branch 'CheckLists' set up to track remote branch 'CheckLists' from 'origin'.
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+ 
+(смотри в формате .docx и в репозитории)
+ 
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (CheckLists)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 688 bytes | 172.00 KiB/s, done.
+From https://github.com/shikulo/Viktoria
+   8826654..fdf4827  main       -> origin/main
+Updating 8826654..fdf4827
+Fast-forward
+ check.txt | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ create mode 100644 check.txt
+
+
