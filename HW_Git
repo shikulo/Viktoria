@@ -1,0 +1,226 @@
+1. Создать файл “new.json”
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ pwd
+/c/Users/user
+
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ cd Viktoria
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ touch new.json
+
+ 2. Добавить файл под гит.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git add .
+
+ 3. Закоммитить файл.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git commit -m "NEW"
+[main 618b8ac] NEW
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.json
+
+ 4. Отправить файл на внешний GitHub репозиторий.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 270 bytes | 270.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shikulo/Viktoria.git
+   204911d..618b8ac  main -> main
+
+ 5. Создать файлы new2.json, new2.xml, new2.txt
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ touch new2.json new2.xml new2.txt
+
+ 6. Добавить файлы под гит.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git add .
+
+ 7. Закоммитить файлы.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git commit -m "NEW2"
+[main c6f56a9] NEW2
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new2.json
+ create mode 100644 new2.txt
+ create mode 100644 new2.xml
+
+ 8. Отправить файлы на внешний GitHub репозиторий.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 279 bytes | 279.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shikulo/Viktoria.git
+   618b8ac..c6f56a9  main -> main
+
+
+ 9. Отредактировать содержание файла “new2.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата).
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ vim new2.txt
+
+(“I”,write text, ESC, :wq)
+ 10. Отредактировать содержание файла “new2.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ vim new2.json
+
+ 11. Добавить и закоммитить “new2.txt” одной строчкой. 
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git add new2.txt && git commit -m "NEW2"
+warning: LF will be replaced by CRLF in new2.txt.
+The file will have its original line endings in your working directory
+[main 7778f45] NEW2
+ 1 file changed, 4 insertions(+)
+
+ 12. Добавить и закоммитить “new2.json” одной строчкой. 
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git add new2.json && git commit -m "NEW2"
+warning: LF will be replaced by CRLF in new2.json.
+The file will have its original line endings in your working directory
+[main 88c9fe5] NEW2
+ 1 file changed, 6 insertions(+)
+
+ 13. Отправить изменения на внешний репозиторий.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 715 bytes | 715.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/shikulo/Viktoria.git
+   c6f56a9..88c9fe5  main -> main
+
+ 14. Отредактировать содержание файла “new2.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ vim new2.xml
+
+ 15. Добавить и закоммитить “new2.xml” одной строчкой. 
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git add new2.xml && git commit -m "NEW2"
+warning: LF will be replaced by CRLF in new2.xml.
+The file will have its original line endings in your working directory
+[main 18e4cd8] NEW2
+ 1 file changed, 6 insertions(+)
+
+ 16. Отправить изменения на внешний репозиторий.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 388 bytes | 388.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shikulo/Viktoria.git
+   88c9fe5..18e4cd8  main -> main
+
+
+ 17. Отправить предыдущее домашнее задание по GitBush Terminal на внешний репозиторий.
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ cd ..
+
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ pwd
+/c/Users/user
+
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ mv ./1.txt ./Viktoria
+
+user@DESKTOP-UUPP9C7 MINGW64 ~
+$ cd Viktoria
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git add .
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git commit -m "Homework1"
+[main 82f0c97] Homework1
+ 1 file changed, 237 insertions(+)
+ create mode 100644 1.txt
+
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.82 KiB | 1.82 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shikulo/Viktoria.git
+   18e4cd8..82f0c97  main -> main
+
+ 18. В веб интерфейсе GitHub создать файл new3.txt.
+ 19. Отредактировать в веб интерфейсе содержание файла “new3.txt” - написать информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить).
+ 20. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 21. Синхронизировать внешний и локальный репозитории (слить изменения с внешнего репозитория) 
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 750 bytes | 125.00 KiB/s, done.
+From https://github.com/shikulo/Viktoria
+   82f0c97..d332d79  main       -> origin/main
+Updating 82f0c97..d332d79
+Fast-forward
+ new3.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 new3.txt
+
+ 22. Отредактировать в веб интерфейсе содержание файла “new2.json” - добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить). Всё в формате JSON.
+ 23. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 24. Синхронизировать внешний и локальный репозитории 
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git pull
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), 2.03 KiB | 109.00 KiB/s, done.
+From https://github.com/shikulo/Viktoria
+   d332d79..4e6f20a  main       -> origin/main
+Updating d332d79..4e6f20a
+Fast-forward
+ new2.json | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+ 25. Отредактировать в веб интерфейсе содержание файла “new2.xml” - добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить). Всё в формате XML.
+ 26. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 27. Синхронизировать внешний и локальный репозитории
+user@DESKTOP-UUPP9C7 MINGW64 ~/Viktoria (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 862 bytes | 95.00 KiB/s, done.
+From https://github.com/shikulo/Viktoria
+   4e6f20a..0409120  main       -> origin/main
+Updating 4e6f20a..0409120
+Fast-forward
+ new2.xml | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
